@@ -7,14 +7,14 @@ cfg.read('config.ini')
 
 email = cfg['login']['email']
 password = cfg['login']['password']
-normand_id = cfg['data']['normand_id']
+athlete_id = cfg['data']['athlete_id']
 
 # For debugging with mitmproxy.  Use with:
 #
 #	proxies=proxies, verify=False
 #
 # in requests.
-# 
+#
 # proxies = {
 #   'http': 'http://127.0.0.1:1234',
 #   'https': 'http://127.0.0.1:1234',
@@ -43,12 +43,12 @@ for activity in activities:
 	if len(avatars) > 0:
 		avatar = avatars[0]
 		profile_link = avatar['href']
-		
-		if profile_link == '/athletes/{}'.format(normand_id):
+
+		if profile_link == '/athletes/{}'.format(athlete_id):
 			kudo_btn = activity.select('button.btn-kudo')[0]
-			
+
 			kudo_img = kudo_btn.select('span.icon-kudo')[0]
-			
+
 			if 'icon-dark' in kudo_img['class']:
 				activity_id = activity['id'].split('-')[1]
 				url = 'https://www.strava.com/feed/activity/{}/kudo'.format(activity_id)
