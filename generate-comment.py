@@ -17,4 +17,4 @@ anoun = nouns[positionnoun]
 twowords = anadjective + " " + anoun
 randomcomment = "What a " + twowords + " of an exercise dude!"
 
-print randomcomment
+print(randomcomment)
