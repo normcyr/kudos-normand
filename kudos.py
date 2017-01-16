@@ -1,7 +1,5 @@
 import argparse
 import mechanicalsoup
-import configparser
-import sys
 import yaml
 import generate_comment
 
