@@ -1,8 +1,9 @@
 import argparse
 import mechanicalsoup
-<<<<<<< HEAD
 import configparser
 import sys
+import yaml
+import generate_comment
 
 cfg = configparser.ConfigParser()
 cfg.read('config.ini')
@@ -17,17 +18,11 @@ athlete_id = cfg['data']['athlete_id']
 #
 # in requests.
 #
-=======
-import yaml
-import generate_comment
-
->>>>>>> d52e090401736eda71ea346cb631fa6dcee36d36
 # proxies = {
 #  'http': 'http://127.0.0.1:1234',
 #  'https': 'http://127.0.0.1:1234',
 # }
 
-<<<<<<< HEAD
 browser = mechanicalsoup.Browser()
 
 login_page = browser.get("https://www.strava.com/login")
@@ -66,7 +61,6 @@ for activity in activities:
 				}
 				result = browser.post(url, headers=headers)
 				assert result.status_code == 200
-=======
 
 def load_config():
     with open('config.yml') as ymlfile:
@@ -167,4 +161,3 @@ if __name__ == "__main__":
                     print('Commenting {}'.format(comment))
                     if not args.dry_run:
                         do_comment(browser, csrf_token, activity_id, comment)
->>>>>>> d52e090401736eda71ea346cb631fa6dcee36d36
