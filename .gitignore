@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 config.ini
 comments.py
 processus.md
 snippets
 listeathletes
 listeathletes.save
+=======
+config.yml
+
+__pycache__/
+>>>>>>> d52e090401736eda71ea346cb631fa6dcee36d36

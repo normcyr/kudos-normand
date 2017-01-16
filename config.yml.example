@@ -1,0 +1,8 @@
+login:
+    email: me@example.com
+    password: secretpassword
+
+athlete_ids:
+    # One user id per line
+    - 1234567
+    - 765432
